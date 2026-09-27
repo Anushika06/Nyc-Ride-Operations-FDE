@@ -1,0 +1,14 @@
+# Regenerable inputs (the pipeline re-downloads them with checksummed manifests)
+data/raw/
+data/reference/
+data/sample_run/
+# Large model output for full-data partitions (the sample partition's small parquet is kept)
+output/2*/ride_journey.parquet
+output/.staging_*
+output/*.previous
+output/_chaos_*/
+output/sample/_chaos_*/
+logs/
+__pycache__/
+*.pyc
+.venv/

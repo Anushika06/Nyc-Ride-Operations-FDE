@@ -1,0 +1,144 @@
+{
+  "run_id": "20260927T202332-605b03",
+  "month": "2026-07",
+  "mode": "full",
+  "chaos": "none",
+  "started_at_utc": "2026-09-27T14:53:32+00:00",
+  "thresholds": {
+    "max_excluded_share": 0.05,
+    "max_duplicate_share": 0.001,
+    "min_on_scene_observed_share": 0.8,
+    "min_weather_hour_coverage": 0.99,
+    "min_rides_per_zone": 1000,
+    "min_311_mapping_coverage": 0.9,
+    "light_rain_max_mm": 2.5,
+    "max_plausible_trip_miles": 100.0,
+    "max_plausible_request_to_pickup_min": 60.0
+  },
+  "finished_at_utc": "2026-09-27T14:54:54+00:00",
+  "duration_seconds": 81.8,
+  "stage_seconds": {
+    "extract_preserve_completeness": 0.52,
+    "profile_validate": 32.51,
+    "transform_model": 7.58,
+    "kpis": 16.78,
+    "write_outputs": 24.43
+  },
+  "http_retries": {},
+  "row_counts": {
+    "rows": 20921249,
+    "kpi_population": 20674713,
+    "stage_population": 19546979,
+    "zone_population": 20673490,
+    "zone_attributable_rides": 20920004,
+    "weather_matched_rides": 20921223,
+    "weather_matched_kpi_rides": 20674712
+  },
+  "gate": {
+    "publish": true,
+    "publish_weather_analysis": true,
+    "publish_friction_kpi": true,
+    "blocking_failures": [],
+    "weather_analysis_blockers": [],
+    "friction_kpi_blockers": [],
+    "status_counts": {
+      "PASS": 27,
+      "WARN": 9,
+      "FAIL": 0,
+      "UNKNOWN": 1
+    }
+  },
+  "decision": "PUBLISHED",
+  "source_manifests": {
+    "hvfhv": {
+      "source": "hvfhv",
+      "url": "https://d37ci6vzurychx.cloudfront.net/trip-data/fhvhv_tripdata_2026-07.parquet",
+      "retrieved_at_utc": "2026-09-27T13:59:08+00:00",
+      "content_length_header": 511176663,
+      "bytes_received": 511176663,
+      "sha256": "8da280d9d23813aae02a6e1d1d1caa8b96eb5e8d38efcbc9a570faf1e418f5a8",
+      "file": "fhvhv_tripdata_2026-07.parquet",
+      "parquet_rows": 20921249,
+      "parquet_columns": [
+        "hvfhs_license_num",
+        "dispatching_base_num",
+        "originating_base_num",
+        "request_datetime",
+        "on_scene_datetime",
+        "pickup_datetime",
+        "dropoff_datetime",
+        "PULocationID",
+        "DOLocationID",
+        "trip_miles",
+        "trip_time",
+        "base_passenger_fare",
+        "tolls",
+        "bcf",
+        "sales_tax",
+        "congestion_surcharge",
+        "airport_fee",
+        "tips",
+        "driver_pay",
+        "shared_request_flag",
+        "shared_match_flag",
+        "access_a_ride_flag",
+        "wav_request_flag",
+        "wav_match_flag",
+        "cbd_congestion_fee"
+      ]
+    },
+    "zones": {
+      "source": "zone_lookup",
+      "url": "https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv",
+      "retrieved_at_utc": "2026-09-25T10:57:47+00:00",
+      "content_length_header": 12331,
+      "bytes_received": 12331,
+      "sha256": "1a99e105092230f8620f301edcca7f80d3080642ff404d28ed957d3fa222c8ed",
+      "file": "taxi_zone_lookup.csv",
+      "rows": 265
+    },
+    "zone_shapes": {
+      "source": "zone_shapes",
+      "url": "https://d37ci6vzurychx.cloudfront.net/misc/taxi_zones.zip",
+      "retrieved_at_utc": "2026-09-27T14:07:17+00:00",
+      "content_length_header": 1022574,
+      "bytes_received": 1022574,
+      "sha256": "f6d711917bb4340f8f644d5366c51665489eb2d426dd1a4a55677721ae5adf17",
+      "file": "taxi_zones.zip"
+    },
+    "weather": {
+      "source": "open_meteo",
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=40.7812&longitude=-73.9665&start_date=2026-06-30&end_date=2026-07-31&hourly=temperature_2m%2Cprecipitation%2Cwind_speed_10m&timezone=America%2FNew_York",
+      "retrieved_at_utc": "2026-09-27T13:59:09+00:00",
+      "bytes_received": 25977,
+      "sha256": "d9aeaa2aaaf8f945724afad3ce0aaa59ac9a87febd3f10a8208c39f8574c930d",
+      "file": "open_meteo_hourly_20260927T135909Z.json"
+    },
+    "nyc311": {
+      "source": "nyc311",
+      "endpoint": "https://data.cityofnewyork.us/resource/erm2-nwe9.json",
+      "where": "complaint_type='For Hire Vehicle Complaint' AND created_date between '2026-07-01T00:00:00' and '2026-07-31T23:59:59'",
+      "order": "unique_key",
+      "page_size": 1000,
+      "retrieved_at_utc": "2026-09-27T14:07:24+00:00",
+      "snapshot_dir": "20260927T140717Z",
+      "expected_count": 1373,
+      "received": 1373,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "offset": 0,
+          "rows": 1000,
+          "sha256": "6595059deb2588ba4642bbdca1e65b52b9aad298a0f9490c36411e8a6c1e0875"
+        },
+        {
+          "file": "page_001.json",
+          "offset": 1000,
+          "rows": 373,
+          "sha256": "b889d4ef93efc75bd4949cfb04798a950b86f311a74393ba1bd8ba8f138cffd0"
+        }
+      ],
+      "count_sha256": "0a2c0725331bca0b0fd97afb4f6a4a577ef4df99cfa2e5923d4c824bb2399c6b"
+    }
+  }
+}

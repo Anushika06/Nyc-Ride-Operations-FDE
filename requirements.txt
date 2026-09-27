@@ -1,0 +1,3 @@
+# Only third-party dependencies. Everything else (HTTP, JSON, CSV, logging, tests) is the Python standard library.
+pyarrow>=15
+numpy>=1.26

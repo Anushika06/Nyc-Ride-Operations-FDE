@@ -1,0 +1,26 @@
+{
+  "month": "2026-07",
+  "label": "SAMPLE - NOT THE COMPLETE DATASET",
+  "method": "10,000 HVFHV rides drawn uniformly without replacement (numpy default_rng seed 42); reference, weather and 311 files copied unchanged from the preserved raw inputs",
+  "source_rows": 20921249,
+  "sample_rows": 10000,
+  "source_sha256": {
+    "hvfhv": "8da280d9d23813aae02a6e1d1d1caa8b96eb5e8d38efcbc9a570faf1e418f5a8",
+    "weather": "d9aeaa2aaaf8f945724afad3ce0aaa59ac9a87febd3f10a8208c39f8574c930d",
+    "nyc311_snapshot": "20260927T140717Z"
+  },
+  "files": {
+    "hvfhv": "hvfhv_sample_2026-07.parquet",
+    "zone_lookup": "taxi_zone_lookup.csv",
+    "zone_shapes": "taxi_zones.zip",
+    "weather": "open_meteo_hourly_2026-07.json",
+    "nyc311": "nyc311_fhv_2026-07.json"
+  },
+  "file_sha256": {
+    "hvfhv": "131f19126abab69105407ffe6ed839d0aae78d9aa4d35a685c3ce9977631a339",
+    "zone_lookup": "1a99e105092230f8620f301edcca7f80d3080642ff404d28ed957d3fa222c8ed",
+    "zone_shapes": "f6d711917bb4340f8f644d5366c51665489eb2d426dd1a4a55677721ae5adf17",
+    "weather": "d9aeaa2aaaf8f945724afad3ce0aaa59ac9a87febd3f10a8208c39f8574c930d",
+    "nyc311": "7f2e575ceef189fce64c51273a8972ccda65bb4365e23cb78f0e29e4e68d6bcc"
+  }
+}

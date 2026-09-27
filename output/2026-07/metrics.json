@@ -1,0 +1,407 @@
+{
+  "month": "2026-07",
+  "mode": "full",
+  "data_scope": "FULL DATA - complete monthly HVFHV file",
+  "run_id": "20260927T202332-605b03",
+  "published_at_utc": "2026-09-27T14:54:30+00:00",
+  "kpis": {
+    "kpi_1_median_request_to_pickup_min": {
+      "value": 4.45,
+      "population_rides": 20674713,
+      "definition": {
+        "name": "Median request-to-pickup time",
+        "formula": "median over rides of (pickup_datetime - request_datetime)",
+        "numerator": "n/a (percentile)",
+        "denominator": "n/a (percentile)",
+        "grain": "one completed HVFHV ride; published per month",
+        "population": "in_kpi_population: request, pickup, dropoff present; pickup >= request; dropoff > pickup",
+        "source": "HVFHV trip records: request_datetime, pickup_datetime, dropoff_datetime",
+        "exclusions": "rides flagged pickup_before_request, dropoff_not_after_pickup or missing_timestamp (flagged, not deleted)",
+        "unit": "minutes",
+        "interpretation": "Typical time a rider waits between asking for a ride and being picked up.",
+        "limitation": "Request-to-pickup time, NOT driver wait time. For unflagged pre-scheduled rides request_datetime may be the booked slot (UNKNOWN; bounded by the sensitivity analysis). Completed trips only.",
+        "validation_checks": [
+          "hvfhv.download_complete",
+          "hvfhv.month_coverage",
+          "hvfhv.timestamp_coverage",
+          "hvfhv.trip_uniqueness",
+          "hvfhv.chronology_request_pickup_dropoff",
+          "hvfhv.request_semantics_scheduled_rides",
+          "output.headline_consistency"
+        ]
+      },
+      "validation_status": "UNKNOWN",
+      "validation_checks_status": {
+        "hvfhv.download_complete": "PASS",
+        "hvfhv.month_coverage": "PASS",
+        "hvfhv.timestamp_coverage": "PASS",
+        "hvfhv.trip_uniqueness": "PASS",
+        "hvfhv.chronology_request_pickup_dropoff": "WARN",
+        "hvfhv.request_semantics_scheduled_rides": "UNKNOWN",
+        "output.headline_consistency": "PASS"
+      }
+    },
+    "kpi_2_p90_request_to_pickup_min": {
+      "value": 10.02,
+      "population_rides": 20674713,
+      "definition": {
+        "name": "P90 request-to-pickup time",
+        "formula": "90th percentile over rides of (pickup_datetime - request_datetime)",
+        "numerator": "n/a (percentile)",
+        "denominator": "n/a (percentile)",
+        "grain": "one completed HVFHV ride; published per month",
+        "population": "same as KPI 1",
+        "source": "HVFHV trip records",
+        "exclusions": "same as KPI 1",
+        "unit": "minutes",
+        "interpretation": "Reliability: 1 in 10 riders waits at least this long. The tail a median hides.",
+        "limitation": "Same as KPI 1; the tail is the part most exposed to unflagged scheduled rides.",
+        "validation_checks": [
+          "hvfhv.download_complete",
+          "hvfhv.month_coverage",
+          "hvfhv.timestamp_coverage",
+          "hvfhv.trip_uniqueness",
+          "hvfhv.chronology_request_pickup_dropoff",
+          "hvfhv.request_semantics_scheduled_rides",
+          "output.headline_consistency"
+        ]
+      },
+      "validation_status": "UNKNOWN",
+      "validation_checks_status": {
+        "hvfhv.download_complete": "PASS",
+        "hvfhv.month_coverage": "PASS",
+        "hvfhv.timestamp_coverage": "PASS",
+        "hvfhv.trip_uniqueness": "PASS",
+        "hvfhv.chronology_request_pickup_dropoff": "WARN",
+        "hvfhv.request_semantics_scheduled_rides": "UNKNOWN",
+        "output.headline_consistency": "PASS"
+      }
+    },
+    "kpi_3_driver_arrival_share_of_wait_pct": {
+      "value": 80.5,
+      "population_rides": 19546979,
+      "population_share_of_kpi_population_pct": 94.55,
+      "supporting": {
+        "median_request_to_on_scene_min": 3.4,
+        "median_on_scene_to_pickup_min": 0.75,
+        "p90_request_to_on_scene_min": 8.8,
+        "p90_on_scene_to_pickup_min": 2.02
+      },
+      "definition": {
+        "name": "Driver-arrival share of request-to-pickup time",
+        "formula": "100 * sum(on_scene - request) / sum(pickup - request)",
+        "numerator": "total minutes from request until the driver is on scene",
+        "denominator": "total minutes from request until pickup",
+        "grain": "all qualifying rides in the month (ratio of sums)",
+        "population": "in_stage_population: KPI population AND request <= on_scene < pickup (on-scene independently observed)",
+        "source": "HVFHV trip records: request_datetime, on_scene_datetime, pickup_datetime",
+        "exclusions": "rides whose on_scene equals pickup to the second, precedes the request, or follows pickup",
+        "unit": "percent",
+        "interpretation": "How much of the rider's wait is spent waiting for the driver to arrive (dispatch + travel) versus the driver waiting at the curb. Tells operations which stage to act on.",
+        "limitation": "Computed on the subset of rides with an observed on-scene event (the subset is published). That subset excludes rides whose on_scene equals pickup to the second - exactly the rides with no curb wait, whose arrival share would be 100% - so the published share is a LOWER BOUND on the driver-arrival share of the wait. Withheld automatically if the subset falls below the configured share.",
+        "validation_checks": [
+          "hvfhv.on_scene_semantics",
+          "hvfhv.chronology_request_pickup_dropoff"
+        ]
+      },
+      "validation_status": "WARN",
+      "validation_checks_status": {
+        "hvfhv.on_scene_semantics": "WARN",
+        "hvfhv.chronology_request_pickup_dropoff": "WARN"
+      }
+    },
+    "kpi_4_p90_request_to_pickup_by_zone": {
+      "value": {
+        "zones_ranked": 254,
+        "zones_below_min_rides": 7,
+        "best_zone_p90_min": 6.73,
+        "worst_zone_p90_min": 20.73,
+        "worst_5": [
+          {
+            "pickup_zone": "Breezy Point/Fort Tilden/Riis Beach",
+            "pickup_borough": "Queens",
+            "rides_in_kpi_population": 4194,
+            "median_request_to_pickup_min": 9.48,
+            "p90_request_to_pickup_min": 20.73
+          },
+          {
+            "pickup_zone": "Flushing Meadows-Corona Park",
+            "pickup_borough": "Queens",
+            "rides_in_kpi_population": 18632,
+            "median_request_to_pickup_min": 6.63,
+            "p90_request_to_pickup_min": 19.91
+          },
+          {
+            "pickup_zone": "City Island",
+            "pickup_borough": "Bronx",
+            "rides_in_kpi_population": 5817,
+            "median_request_to_pickup_min": 8.85,
+            "p90_request_to_pickup_min": 19.68
+          },
+          {
+            "pickup_zone": "Randalls Island",
+            "pickup_borough": "Manhattan",
+            "rides_in_kpi_population": 6077,
+            "median_request_to_pickup_min": 7.75,
+            "p90_request_to_pickup_min": 17.82
+          },
+          {
+            "pickup_zone": "Broad Channel",
+            "pickup_borough": "Queens",
+            "rides_in_kpi_population": 2001,
+            "median_request_to_pickup_min": 7.75,
+            "p90_request_to_pickup_min": 17.35
+          }
+        ],
+        "best_5": [
+          {
+            "pickup_zone": "Upper East Side South",
+            "pickup_borough": "Manhattan",
+            "rides_in_kpi_population": 138991,
+            "median_request_to_pickup_min": 3.35,
+            "p90_request_to_pickup_min": 6.73
+          },
+          {
+            "pickup_zone": "Sutton Place/Turtle Bay North",
+            "pickup_borough": "Manhattan",
+            "rides_in_kpi_population": 101035,
+            "median_request_to_pickup_min": 3.5,
+            "p90_request_to_pickup_min": 7.03
+          },
+          {
+            "pickup_zone": "Saint Michaels Cemetery/Woodside",
+            "pickup_borough": "Queens",
+            "rides_in_kpi_population": 4133,
+            "median_request_to_pickup_min": 3.85,
+            "p90_request_to_pickup_min": 7.15
+          },
+          {
+            "pickup_zone": "Flatiron",
+            "pickup_borough": "Manhattan",
+            "rides_in_kpi_population": 124565,
+            "median_request_to_pickup_min": 3.42,
+            "p90_request_to_pickup_min": 7.3
+          },
+          {
+            "pickup_zone": "Gramercy",
+            "pickup_borough": "Manhattan",
+            "rides_in_kpi_population": 131811,
+            "median_request_to_pickup_min": 3.57,
+            "p90_request_to_pickup_min": 7.38
+          }
+        ],
+        "zones_with_p90_over_1_5x_citywide": 9
+      },
+      "population_rides": 20673490,
+      "detail_file": "zone_breakdown.csv",
+      "definition": {
+        "name": "P90 request-to-pickup time by pickup zone",
+        "formula": "90th percentile of (pickup - request) per PULocationID, labelled via the taxi zone lookup",
+        "numerator": "n/a (percentile)",
+        "denominator": "n/a (percentile)",
+        "grain": "one pickup zone per month",
+        "population": "in_zone_population (KPI population with an attributable NYC pickup zone); zones with fewer than min_rides_per_zone rides are listed but not ranked",
+        "source": "HVFHV PULocationID + request/pickup timestamps; Taxi Zone Lookup",
+        "exclusions": "placeholder zone IDs 264/265 (Unknown / Outside of NYC); IDs absent from the lookup",
+        "unit": "minutes",
+        "interpretation": "Where the poor-tail pickup experience is concentrated, so supply positioning can be targeted.",
+        "limitation": "Zone differences mix supply, demand, geography and trip mix: descriptive, not causal.",
+        "validation_checks": [
+          "hvfhv.pickup_location_integrity",
+          "output.zone_reconciliation",
+          "hvfhv.download_complete",
+          "hvfhv.month_coverage",
+          "hvfhv.timestamp_coverage",
+          "hvfhv.trip_uniqueness",
+          "hvfhv.chronology_request_pickup_dropoff"
+        ]
+      },
+      "validation_status": "WARN",
+      "validation_checks_status": {
+        "hvfhv.pickup_location_integrity": "WARN",
+        "output.zone_reconciliation": "PASS",
+        "hvfhv.download_complete": "PASS",
+        "hvfhv.month_coverage": "PASS",
+        "hvfhv.timestamp_coverage": "PASS",
+        "hvfhv.trip_uniqueness": "PASS",
+        "hvfhv.chronology_request_pickup_dropoff": "WARN"
+      }
+    },
+    "kpi_5_passenger_311_complaints_per_100k_rides": {
+      "value": {
+        "citywide_rate_per_100k": 1.13,
+        "citywide_passenger_complaints": 237,
+        "citywide_hvfhv_pickups": 20920004,
+        "passenger_complaints_unmapped": 11,
+        "rate_understatement_pct": 4.4,
+        "denominator_note": "all zone-attributable pickups (includes rides flagged by the lifecycle rules); the P90 column in the borough table uses the KPI population instead",
+        "by_borough": {
+          "Bronx": {
+            "passenger_complaints": 38,
+            "hvfhv_pickups": 2813178,
+            "rate_per_100k": 1.35,
+            "p90_request_to_pickup_min": 10.9
+          },
+          "Brooklyn": {
+            "passenger_complaints": 50,
+            "hvfhv_pickups": 5590092,
+            "rate_per_100k": 0.89,
+            "p90_request_to_pickup_min": 10.08
+          },
+          "Manhattan": {
+            "passenger_complaints": 72,
+            "hvfhv_pickups": 7402767,
+            "rate_per_100k": 0.97,
+            "p90_request_to_pickup_min": 8.82
+          },
+          "Queens": {
+            "passenger_complaints": 76,
+            "hvfhv_pickups": 4771345,
+            "rate_per_100k": 1.59,
+            "p90_request_to_pickup_min": 10.9
+          },
+          "Staten Island": {
+            "passenger_complaints": 1,
+            "hvfhv_pickups": 342619,
+            "rate_per_100k": 0.29,
+            "p90_request_to_pickup_min": 12.38
+          }
+        }
+      },
+      "population_rides": 20920004,
+      "definition": {
+        "name": "Passenger FHV complaints to 311 per 100,000 HVFHV rides",
+        "formula": "100000 * passenger_complaints / hvfhv_pickups, citywide and per borough",
+        "numerator": "311 'For Hire Vehicle Complaint' records with descriptor 'Driver Complaint - Passenger' or 'Car Service Company Complaint', created in the month, mapped to a taxi zone",
+        "denominator": "HVFHV rides picked up in an attributable NYC zone in the same month (same geography). NOTE: this denominator is all zone-attributable pickups, including rides flagged by the lifecycle rules; the p90_request_to_pickup_min shown next to it in the borough table is computed on the KPI population (in_zone_population), a slightly smaller set. The two columns answer different questions on purpose.",
+        "grain": "borough per month (headline) - zone-level counts are published as supporting detail only",
+        "population": "all mapped passenger complaints; all zone-attributable HVFHV pickups",
+        "source": "NYC 311 Service Requests (Socrata erm2-nwe9), TLC taxi zone shapefile, HVFHV trips",
+        "exclusions": "non-passenger complaints (street safety, 81% of FHV complaints); complaints without coordinates or outside all zones (counted in validation, not guessed). Unmapped PASSENGER complaints are therefore missing from the numerator: the count and the resulting understatement are published as passenger_complaints_unmapped / rate_understatement_pct on this KPI",
+        "unit": "complaints per 100,000 rides",
+        "interpretation": "A contextual customer-friction signal: where riders escalate problems to the city. Read next to KPI 4 to see whether slow-pickup areas also generate more rider complaints.",
+        "limitation": "NOT a ride-level interaction: 311 has no ride ID and is never linked to a ride. Covers all FHV types (not only HVFHV), reflects the propensity to call 311, and is sparse - monthly zone-level rates are too noisy to rank, hence borough grain.",
+        "validation_checks": [
+          "nyc311.retrieval_complete",
+          "nyc311.unique_key",
+          "nyc311.date_coverage",
+          "nyc311.zone_mapping_coverage",
+          "nyc311.zone_mapping_borough_agreement",
+          "output.friction_reconciliation"
+        ]
+      },
+      "validation_status": "PASS",
+      "validation_checks_status": {
+        "nyc311.retrieval_complete": "PASS",
+        "nyc311.unique_key": "PASS",
+        "nyc311.date_coverage": "PASS",
+        "nyc311.zone_mapping_coverage": "PASS",
+        "nyc311.zone_mapping_borough_agreement": "PASS",
+        "output.friction_reconciliation": "PASS"
+      }
+    }
+  },
+  "supporting_analyses": {
+    "by_company": {
+      "HV0003": {
+        "company": "Uber",
+        "rides": 15043337,
+        "median": 4.4,
+        "p90": 10.5
+      },
+      "HV0005": {
+        "company": "Lyft",
+        "rides": 5631376,
+        "median": 4.58,
+        "p90": 8.8
+      }
+    },
+    "by_borough": {
+      "Bronx": {
+        "rides": 2782588,
+        "median": 4.98,
+        "p90": 10.9
+      },
+      "Brooklyn": {
+        "rides": 5528597,
+        "median": 4.55,
+        "p90": 10.08
+      },
+      "Manhattan": {
+        "rides": 7308694,
+        "median": 4.0,
+        "p90": 8.82
+      },
+      "Queens": {
+        "rides": 4717850,
+        "median": 4.72,
+        "p90": 10.9
+      },
+      "Staten Island": {
+        "rides": 335759,
+        "median": 5.42,
+        "p90": 12.38
+      }
+    },
+    "precipitation_association": {
+      "by_band": {
+        "dry": {
+          "rides": 15358463,
+          "median": 4.47,
+          "p90": 10.05
+        },
+        "light_rain": {
+          "rides": 4373299,
+          "median": 4.42,
+          "p90": 9.92
+        },
+        "moderate_or_heavy_rain": {
+          "rides": 942950,
+          "median": 4.43,
+          "p90": 10.15
+        }
+      },
+      "hour_matched_median_diff_vs_dry_min": {
+        "light_rain": 0.05,
+        "moderate_or_heavy_rain": 0.08
+      },
+      "conclusion": "Demoted from KPI: hour-matched differences are ~0.1 min, no operational signal this month. Association only; one grid point represents all of NYC."
+    },
+    "sensitivity_scheduled_rides": {
+      "question": "Are unflagged pre-scheduled rides distorting request-to-pickup time?",
+      "method": "recompute KPI 1/2 excluding rides whose request timestamp is on an exact minute",
+      "kpi_population": {
+        "rides": 20674713,
+        "median": 4.45,
+        "p90": 10.02
+      },
+      "excluding_whole_minute_requests": {
+        "rides": 20221341,
+        "median": 4.47,
+        "p90": 10.0
+      },
+      "note": "Over-excludes (1 in 60 ordinary requests land on :00 by chance); it bounds the effect."
+    },
+    "nyc311_composition": {
+      "complaints_by_category": {
+        "passenger": 248,
+        "non_passenger": 1122,
+        "other": 3
+      },
+      "pickup_reliability_reasons": 58,
+      "note": "Non-passenger complaints (street safety) are excluded from KPI 5. Pickup-reliability reasons (refused pick-up, denied request, no-show) are too few to publish as their own metric."
+    }
+  },
+  "weather": {
+    "grid_lat": 40.808434,
+    "grid_lon": -74.0199,
+    "join_rule": "floor(request_datetime, hour) == open_meteo.hourly.time (America/New_York)"
+  },
+  "sources": {
+    "hvfhv_sha256": "8da280d9d23813aae02a6e1d1d1caa8b96eb5e8d38efcbc9a570faf1e418f5a8",
+    "zones_sha256": "1a99e105092230f8620f301edcca7f80d3080642ff404d28ed957d3fa222c8ed",
+    "zone_shapes_sha256": "f6d711917bb4340f8f644d5366c51665489eb2d426dd1a4a55677721ae5adf17",
+    "weather_sha256": "d9aeaa2aaaf8f945724afad3ce0aaa59ac9a87febd3f10a8208c39f8574c930d",
+    "nyc311_snapshot": "20260927T140717Z"
+  }
+}

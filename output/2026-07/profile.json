@@ -1,0 +1,89 @@
+{
+  "rows": 20921249,
+  "columns": {
+    "hvfhs_license_num": {
+      "type": "large_string",
+      "null_pct": 0.0
+    },
+    "request_datetime": {
+      "type": "timestamp[us]",
+      "null_pct": 0.0,
+      "min": "2026-06-29 14:40:33",
+      "max": "2026-08-01 00:30:00"
+    },
+    "on_scene_datetime": {
+      "type": "timestamp[us]",
+      "null_pct": 0.0,
+      "min": "2026-06-30 23:09:00",
+      "max": "2026-07-31 23:59:58"
+    },
+    "pickup_datetime": {
+      "type": "timestamp[us]",
+      "null_pct": 0.0,
+      "min": "2026-07-01 00:00:00",
+      "max": "2026-07-31 23:59:59"
+    },
+    "dropoff_datetime": {
+      "type": "timestamp[us]",
+      "null_pct": 0.0,
+      "min": "2026-07-01 00:02:11",
+      "max": "2026-08-01 02:04:28"
+    },
+    "PULocationID": {
+      "type": "int32",
+      "null_pct": 0.0,
+      "min": "1",
+      "max": "265"
+    },
+    "DOLocationID": {
+      "type": "int32",
+      "null_pct": 0.0,
+      "min": "1",
+      "max": "265"
+    },
+    "trip_miles": {
+      "type": "double",
+      "null_pct": 0.0,
+      "min": "0.0",
+      "max": "1431.47"
+    },
+    "trip_time": {
+      "type": "int64",
+      "null_pct": 0.0,
+      "min": "0",
+      "max": "49332"
+    },
+    "base_passenger_fare": {
+      "type": "double",
+      "null_pct": 0.0,
+      "min": "-225.21",
+      "max": "1418.32"
+    }
+  },
+  "by_license": {
+    "HV0003": {
+      "rides": 15215374,
+      "on_scene_status": {
+        "observed": 13946492,
+        "same_as_pickup": 998964,
+        "before_request": 269420,
+        "after_pickup": 498,
+        "missing": 0
+      },
+      "on_scene_observed_pct": 91.661,
+      "trip_time_mismatch_pct": 0.004
+    },
+    "HV0005": {
+      "rides": 5705875,
+      "on_scene_status": {
+        "observed": 5600489,
+        "same_as_pickup": 8136,
+        "before_request": 97250,
+        "after_pickup": 0,
+        "missing": 0
+      },
+      "on_scene_observed_pct": 98.153,
+      "trip_time_mismatch_pct": 10.898
+    }
+  }
+}

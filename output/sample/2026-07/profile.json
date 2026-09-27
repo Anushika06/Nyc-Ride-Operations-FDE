@@ -1,0 +1,89 @@
+{
+  "rows": 10000,
+  "columns": {
+    "hvfhs_license_num": {
+      "type": "large_string",
+      "null_pct": 0.0
+    },
+    "request_datetime": {
+      "type": "timestamp[us]",
+      "null_pct": 0.0,
+      "min": "2026-06-30 23:58:56",
+      "max": "2026-07-31 23:53:31"
+    },
+    "on_scene_datetime": {
+      "type": "timestamp[us]",
+      "null_pct": 0.0,
+      "min": "2026-07-01 00:14:58",
+      "max": "2026-07-31 23:56:49"
+    },
+    "pickup_datetime": {
+      "type": "timestamp[us]",
+      "null_pct": 0.0,
+      "min": "2026-07-01 00:15:29",
+      "max": "2026-07-31 23:57:45"
+    },
+    "dropoff_datetime": {
+      "type": "timestamp[us]",
+      "null_pct": 0.0,
+      "min": "2026-07-01 00:26:23",
+      "max": "2026-08-01 00:27:02"
+    },
+    "PULocationID": {
+      "type": "int32",
+      "null_pct": 0.0,
+      "min": "3",
+      "max": "263"
+    },
+    "DOLocationID": {
+      "type": "int32",
+      "null_pct": 0.0,
+      "min": "1",
+      "max": "265"
+    },
+    "trip_miles": {
+      "type": "double",
+      "null_pct": 0.0,
+      "min": "0.0",
+      "max": "109.59"
+    },
+    "trip_time": {
+      "type": "int64",
+      "null_pct": 0.0,
+      "min": "13",
+      "max": "9337"
+    },
+    "base_passenger_fare": {
+      "type": "double",
+      "null_pct": 0.0,
+      "min": "-4.18",
+      "max": "502.76"
+    }
+  },
+  "by_license": {
+    "HV0003": {
+      "rides": 7349,
+      "on_scene_status": {
+        "observed": 6738,
+        "same_as_pickup": 486,
+        "before_request": 125,
+        "after_pickup": 0,
+        "missing": 0
+      },
+      "on_scene_observed_pct": 91.686,
+      "trip_time_mismatch_pct": 0.0
+    },
+    "HV0005": {
+      "rides": 2651,
+      "on_scene_status": {
+        "observed": 2584,
+        "same_as_pickup": 5,
+        "before_request": 62,
+        "after_pickup": 0,
+        "missing": 0
+      },
+      "on_scene_observed_pct": 97.473,
+      "trip_time_mismatch_pct": 10.826
+    }
+  }
+}

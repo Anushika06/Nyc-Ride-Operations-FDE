@@ -1,0 +1,262 @@
+pickup_zone_id,pickup_zone,pickup_borough,rides_in_kpi_population,median_request_to_pickup_min,p90_request_to_pickup_min,ranked,hvfhv_pickups_all,nyc311_complaints_all,nyc311_complaints_passenger,nyc311_complaints_pickup_reliability,nyc311_passenger_rate_per_100k,nyc311_low_count_flag
+1,Newark Airport,EWR,2,32.78,54.21,False,3,0,0,0,0.0,True
+2,Jamaica Bay,Queens,81,7.9,16.82,False,81,0,0,0,0.0,True
+3,Allerton/Pelham Gardens,Bronx,50964,4.48,9.57,True,51464,0,0,0,0.0,True
+4,Alphabet City,Manhattan,52495,4.6,10.03,True,53289,9,1,1,1.88,True
+5,Arden Heights,Staten Island,6304,6.1,13.8,True,6602,0,0,0,0.0,True
+6,Arrochar/Fort Wadsworth,Staten Island,12913,5.4,12.12,True,13214,0,0,0,0.0,True
+7,Astoria,Queens,206872,3.78,8.15,True,208561,5,0,0,0.0,True
+8,Astoria Park,Queens,1475,4.02,8.67,True,1480,0,0,0,0.0,True
+9,Auburndale,Queens,19388,4.38,9.45,True,19778,0,0,0,0.0,True
+10,Baisley Park,Queens,72776,4.53,9.67,True,74128,3,1,0,1.35,True
+11,Bath Beach,Brooklyn,26281,4.1,8.93,True,26664,2,0,0,0.0,True
+12,Battery Park,Manhattan,3525,4.72,10.19,True,3546,0,0,0,0.0,True
+13,Battery Park City,Manhattan,87864,4.12,8.3,True,88720,5,2,1,2.25,True
+14,Bay Ridge,Brooklyn,114351,3.93,8.3,True,115717,4,1,0,0.86,True
+15,Bay Terrace/Fort Totten,Queens,16327,5.53,12.28,True,16762,0,0,0,0.0,True
+16,Bayside,Queens,44153,4.43,9.87,True,44829,0,0,0,0.0,True
+17,Bedford,Brooklyn,156755,4.82,10.43,True,158577,5,0,0,0.0,True
+18,Bedford Park,Bronx,103570,4.83,10.7,True,104581,11,1,0,0.96,True
+19,Bellerose,Queens,20057,5.38,11.15,True,20446,1,1,1,4.89,True
+20,Belmont,Bronx,61076,4.62,10.35,True,61652,0,0,0,0.0,True
+21,Bensonhurst East,Brooklyn,56176,4.07,8.97,True,56921,4,4,2,7.03,True
+22,Bensonhurst West,Brooklyn,78774,4.15,8.93,True,79748,17,0,0,0.0,True
+23,Bloomfield/Emerson Hill,Staten Island,31586,5.47,12.62,True,32257,1,0,0,0.0,True
+24,Bloomingdale,Manhattan,25943,4.38,9.6,True,26412,1,0,0,0.0,True
+25,Boerum Hill,Brooklyn,114882,4.37,9.38,True,116352,9,0,0,0.0,True
+26,Borough Park,Brooklyn,81483,4.58,9.65,True,82216,2,0,0,0.0,True
+27,Breezy Point/Fort Tilden/Riis Beach,Queens,4194,9.48,20.73,True,4324,0,0,0,0.0,True
+28,Briarwood/Jamaica Hills,Queens,54420,4.58,9.8,True,55113,5,0,0,0.0,True
+29,Brighton Beach,Brooklyn,48463,4.13,9.0,True,49067,1,0,0,0.0,True
+30,Broad Channel,Queens,2001,7.75,17.35,True,2039,0,0,0,0.0,True
+31,Bronx Park,Bronx,8450,5.12,11.25,True,8514,0,0,0,0.0,True
+32,Bronxdale,Bronx,52219,4.7,9.95,True,52820,1,0,0,0.0,True
+33,Brooklyn Heights,Brooklyn,97089,4.27,9.38,True,98148,4,1,0,1.02,True
+34,Brooklyn Navy Yard,Brooklyn,17678,4.95,11.97,True,17799,1,0,0,0.0,True
+35,Brownsville,Brooklyn,128834,5.67,12.48,True,130606,0,0,0,0.0,True
+36,Bushwick North,Brooklyn,162449,4.55,10.78,True,163628,3,0,0,0.0,True
+37,Bushwick South,Brooklyn,230836,4.75,10.67,True,233042,7,2,0,0.86,True
+38,Cambria Heights,Queens,27200,5.25,11.1,True,27633,0,0,0,0.0,True
+39,Canarsie,Brooklyn,164927,5.27,11.58,True,166831,1,1,0,0.6,True
+40,Carroll Gardens,Brooklyn,47347,3.95,8.27,True,47831,2,0,0,0.0,True
+41,Central Harlem,Manhattan,137941,4.95,10.63,True,139446,2,1,1,0.72,True
+42,Central Harlem North,Manhattan,191249,5.43,11.8,True,193503,4,1,0,0.52,True
+43,Central Park,Manhattan,31098,4.0,8.55,True,31320,2,0,0,0.0,True
+44,Charleston/Tottenville,Staten Island,10298,6.33,14.47,True,10540,0,0,0,0.0,True
+45,Chinatown,Manhattan,53439,4.3,9.43,True,53975,16,2,0,3.71,True
+46,City Island,Bronx,5817,8.85,19.68,True,5955,1,0,0,0.0,True
+47,Claremont/Bathgate,Bronx,70787,5.03,10.77,True,71602,1,0,0,0.0,True
+48,Clinton East,Manhattan,185641,3.88,8.58,True,189237,23,0,0,0.0,True
+49,Clinton Hill,Brooklyn,118303,4.35,9.35,True,119536,15,1,1,0.84,True
+50,Clinton West,Manhattan,105798,4.2,8.87,True,107195,9,3,0,2.8,True
+51,Co-Op City,Bronx,87638,5.35,11.32,True,88867,2,2,1,2.25,True
+52,Cobble Hill,Brooklyn,29349,3.78,8.05,True,29639,3,0,0,0.0,True
+53,College Point,Queens,34655,5.45,12.42,True,35194,0,0,0,0.0,True
+54,Columbia Street,Brooklyn,10988,4.17,8.68,True,11078,1,0,0,0.0,True
+55,Coney Island,Brooklyn,66698,4.88,11.27,True,67995,6,4,2,5.88,True
+56,Corona,Queens,70396,4.67,9.98,True,71420,1,0,0,0.0,True
+57,Corona,Queens,6273,4.97,10.88,True,6319,1,0,0,0.0,True
+58,Country Club,Bronx,8211,5.83,12.52,True,8352,0,0,0,0.0,True
+59,Crotona Park,Bronx,2992,5.35,11.78,True,3023,0,0,0,0.0,True
+60,Crotona Park East,Bronx,49182,5.15,10.93,True,49737,2,1,0,2.01,True
+61,Crown Heights North,Brooklyn,272033,5.0,11.03,True,275619,12,2,0,0.73,True
+62,Crown Heights South,Brooklyn,73767,5.05,10.93,True,74697,10,0,0,0.0,True
+63,Cypress Hills,Brooklyn,71124,4.68,10.33,True,72169,5,3,1,4.16,True
+64,Douglaston,Queens,14952,6.33,13.38,True,15353,0,0,0,0.0,True
+65,Downtown Brooklyn/MetroTech,Brooklyn,98432,4.73,10.37,True,99746,27,0,0,0.0,True
+66,DUMBO/Vinegar Hill,Brooklyn,81001,4.48,10.17,True,81533,4,1,0,1.23,True
+67,Dyker Heights,Brooklyn,38872,4.13,8.9,True,39336,1,0,0,0.0,True
+68,East Chelsea,Manhattan,212306,3.8,8.63,True,215631,37,2,1,0.93,True
+69,East Concourse/Concourse Village,Bronx,110962,5.28,11.95,True,112209,2,1,0,0.89,True
+70,East Elmhurst,Queens,53223,4.25,9.52,True,53975,1,0,0,0.0,True
+71,East Flatbush/Farragut,Brooklyn,93155,5.02,10.82,True,94243,1,0,0,0.0,True
+72,East Flatbush/Remsen Village,Brooklyn,106950,5.62,12.08,True,108300,2,1,0,0.92,True
+73,East Flushing,Queens,22569,4.42,9.79,True,22880,0,0,0,0.0,True
+74,East Harlem North,Manhattan,148466,5.22,10.98,True,150209,5,5,2,3.33,False
+75,East Harlem South,Manhattan,127247,4.73,10.13,True,129039,3,0,0,0.0,True
+76,East New York,Brooklyn,246151,4.93,10.73,True,248743,8,5,2,2.01,False
+77,East New York/Pennsylvania Avenue,Brooklyn,58469,5.17,11.32,True,59227,1,0,0,0.0,True
+78,East Tremont,Bronx,96208,4.88,10.75,True,97332,1,0,0,0.0,True
+79,East Village,Manhattan,223424,3.63,7.92,True,225191,36,2,0,0.89,True
+80,East Williamsburg,Brooklyn,160854,4.33,10.05,True,162145,5,0,0,0.0,True
+81,Eastchester,Bronx,65213,5.35,11.25,True,65855,3,3,2,4.56,True
+82,Elmhurst,Queens,165513,4.3,9.4,True,166715,5,1,1,0.6,True
+83,Elmhurst/Maspeth,Queens,54718,4.3,9.16,True,55145,4,3,2,5.44,True
+84,Eltingville/Annadale/Prince's Bay,Staten Island,9890,5.78,13.05,True,10240,0,0,0,0.0,True
+85,Erasmus,Brooklyn,69600,4.8,10.22,True,70329,1,0,0,0.0,True
+86,Far Rockaway,Queens,47746,6.73,15.23,True,49137,0,0,0,0.0,True
+87,Financial District North,Manhattan,125063,3.97,8.63,True,127081,7,2,1,1.57,True
+88,Financial District South,Manhattan,55711,4.08,8.88,True,56435,10,2,0,3.54,True
+89,Flatbush/Ditmas Park,Brooklyn,162491,4.4,9.32,True,164573,7,3,0,1.82,True
+90,Flatiron,Manhattan,124565,3.42,7.3,True,126204,21,0,0,0.0,True
+91,Flatlands,Brooklyn,103729,4.93,10.5,True,105001,0,0,0,0.0,True
+92,Flushing,Queens,121104,4.8,10.8,True,122792,3,1,1,0.81,True
+93,Flushing Meadows-Corona Park,Queens,18632,6.63,19.91,True,18724,2,1,0,5.34,True
+94,Fordham South,Bronx,46890,4.92,10.8,True,47325,2,0,0,0.0,True
+95,Forest Hills,Queens,152675,4.47,9.77,True,154786,3,0,0,0.0,True
+96,Forest Park/Highland Park,Queens,3883,5.13,11.13,True,3911,0,0,0,0.0,True
+97,Fort Greene,Brooklyn,140489,4.57,10.18,True,141893,29,3,2,2.11,True
+98,Fresh Meadows,Queens,19798,4.82,10.7,True,20178,1,0,0,0.0,True
+99,Freshkills Park,Staten Island,696,6.29,13.6,False,699,0,0,0,0.0,True
+100,Garment District,Manhattan,115576,4.13,9.63,True,117779,14,2,0,1.7,True
+101,Glen Oaks,Queens,21246,5.58,12.07,True,21774,1,0,0,0.0,True
+102,Glendale,Queens,54625,4.65,9.97,True,55223,0,0,0,0.0,True
+105,Governor's Island/Ellis Island/Liberty Island,Manhattan,1,7.83,7.83,False,2,0,0,0,0.0,True
+106,Gowanus,Brooklyn,47395,4.13,8.4,True,47864,2,1,1,2.09,True
+107,Gramercy,Manhattan,131811,3.57,7.38,True,133425,47,3,1,2.25,True
+108,Gravesend,Brooklyn,31555,4.15,9.05,True,32079,2,1,0,3.12,True
+109,Great Kills,Staten Island,15584,5.75,13.15,True,16022,0,0,0,0.0,True
+110,Great Kills Park,Staten Island,70,7.88,15.49,False,70,0,0,0,0.0,True
+111,Green-Wood Cemetery,Brooklyn,938,4.03,8.48,False,943,0,0,0,0.0,True
+112,Greenpoint,Brooklyn,206953,4.02,8.85,True,208539,41,0,0,0.0,True
+113,Greenwich Village North,Manhattan,98631,3.55,7.38,True,99565,30,0,0,0.0,True
+114,Greenwich Village South,Manhattan,107343,3.63,7.98,True,107920,15,0,0,0.0,True
+115,Grymes Hill/Clifton,Staten Island,17782,6.05,13.0,True,18082,3,0,0,0.0,True
+116,Hamilton Heights,Manhattan,94335,5.03,11.23,True,95480,1,1,0,1.05,True
+117,Hammels/Arverne,Queens,39193,7.02,16.17,True,40308,0,0,0,0.0,True
+118,Heartland Village/Todt Hill,Staten Island,22060,5.52,12.78,True,22571,0,0,0,0.0,True
+119,Highbridge,Bronx,72485,5.25,12.0,True,73351,2,2,0,2.73,True
+120,Highbridge Park,Manhattan,2305,5.15,11.78,True,2327,0,0,0,0.0,True
+121,Hillcrest/Pomonok,Queens,43260,4.77,10.3,True,43923,2,2,0,4.55,True
+122,Hollis,Queens,28180,5.13,10.98,True,28724,0,0,0,0.0,True
+123,Homecrest,Brooklyn,51692,3.8,7.92,True,52202,1,1,0,1.92,True
+124,Howard Beach,Queens,34522,5.37,12.12,True,35045,0,0,0,0.0,True
+125,Hudson Sq,Manhattan,69286,3.67,7.82,True,70151,20,0,0,0.0,True
+126,Hunts Point,Bronx,66788,5.07,11.22,True,67360,0,0,0,0.0,True
+127,Inwood,Manhattan,81394,4.48,10.27,True,82226,3,0,0,0.0,True
+128,Inwood Hill Park,Manhattan,6418,4.27,9.07,True,6464,0,0,0,0.0,True
+129,Jackson Heights,Queens,175315,4.38,9.58,True,176953,6,0,0,0.0,True
+130,Jamaica,Queens,179552,4.77,10.55,True,181381,2,2,1,1.1,True
+131,Jamaica Estates,Queens,33892,4.75,10.08,True,34464,2,1,0,2.9,True
+132,JFK Airport,Queens,371295,6.23,14.0,True,373091,45,35,0,9.38,False
+133,Kensington,Brooklyn,36555,4.1,8.43,True,37097,4,4,4,10.78,True
+134,Kew Gardens,Queens,50625,4.25,9.08,True,51302,1,0,0,0.0,True
+135,Kew Gardens Hills,Queens,34870,4.55,9.68,True,35452,1,1,0,2.82,True
+136,Kingsbridge Heights,Bronx,53748,4.8,10.58,True,54329,4,0,0,0.0,True
+137,Kips Bay,Manhattan,100999,3.93,8.42,True,102216,8,2,0,1.96,True
+138,LaGuardia Airport,Queens,412523,5.9,14.07,True,415137,16,14,0,3.37,False
+139,Laurelton,Queens,46215,5.18,11.0,True,46866,2,1,0,2.13,True
+140,Lenox Hill East,Manhattan,109714,4.05,8.67,True,111226,4,2,0,1.8,True
+141,Lenox Hill West,Manhattan,114000,3.73,7.4,True,115417,5,1,1,0.87,True
+142,Lincoln Square East,Manhattan,122409,3.78,7.83,True,124272,6,0,0,0.0,True
+143,Lincoln Square West,Manhattan,82585,4.05,8.28,True,83918,1,0,0,0.0,True
+144,Little Italy/NoLiTa,Manhattan,137076,3.85,8.25,True,137924,28,1,0,0.73,True
+145,Long Island City/Hunters Point,Queens,193240,3.95,8.68,True,194631,10,0,0,0.0,True
+146,Long Island City/Queens Plaza,Queens,54995,3.82,8.18,True,55621,3,0,0,0.0,True
+147,Longwood,Bronx,43639,4.75,10.45,True,44141,0,0,0,0.0,True
+148,Lower East Side,Manhattan,198303,4.0,9.15,True,199946,33,2,0,1.0,True
+149,Madison,Brooklyn,48884,3.85,8.02,True,49406,3,0,0,0.0,True
+150,Manhattan Beach,Brooklyn,24003,4.28,9.63,True,24282,0,0,0,0.0,True
+151,Manhattan Valley,Manhattan,52791,4.4,9.28,True,53805,3,1,0,1.86,True
+152,Manhattanville,Manhattan,45718,5.12,11.4,True,46229,2,1,1,2.16,True
+153,Marble Hill,Manhattan,20213,4.97,10.8,True,20422,0,0,0,0.0,True
+154,Marine Park/Floyd Bennett Field,Brooklyn,2202,5.65,12.4,True,2218,1,0,0,0.0,True
+155,Marine Park/Mill Basin,Brooklyn,58725,4.95,11.15,True,59570,0,0,0,0.0,True
+156,Mariners Harbor,Staten Island,30670,5.12,11.4,True,31112,3,0,0,0.0,True
+157,Maspeth,Queens,72439,4.68,10.42,True,73082,0,0,0,0.0,True
+158,Meatpacking/West Village West,Manhattan,106745,3.67,8.02,True,107420,13,0,0,0.0,True
+159,Melrose South,Bronx,98815,4.87,10.75,True,99828,0,0,0,0.0,True
+160,Middle Village,Queens,49459,4.62,9.88,True,50124,1,0,0,0.0,True
+161,Midtown Center,Manhattan,245109,3.8,8.77,True,248125,6,0,0,0.0,True
+162,Midtown East,Manhattan,164826,3.47,7.4,True,167364,25,0,0,0.0,True
+163,Midtown North,Manhattan,156371,3.52,7.47,True,159000,18,0,0,0.0,True
+164,Midtown South,Manhattan,198936,3.82,8.47,True,202372,12,2,1,0.99,True
+165,Midwood,Brooklyn,54452,3.97,8.33,True,55338,3,3,1,5.42,True
+166,Morningside Heights,Manhattan,74312,4.23,9.23,True,75412,3,0,0,0.0,True
+167,Morrisania/Melrose,Bronx,80806,5.02,10.77,True,81793,2,1,1,1.22,True
+168,Mott Haven/Port Morris,Bronx,141935,5.1,11.05,True,143499,3,0,0,0.0,True
+169,Mount Hope,Bronx,104206,5.03,11.18,True,105310,1,0,0,0.0,True
+170,Murray Hill,Manhattan,174339,3.78,8.05,True,176720,22,1,1,0.57,True
+171,Murray Hill-Queens,Queens,45817,4.22,9.3,True,46437,0,0,0,0.0,True
+172,New Dorp/Midland Beach,Staten Island,13897,5.4,12.96,True,14229,0,0,0,0.0,True
+173,North Corona,Queens,59339,5.0,10.97,True,59855,4,2,0,3.34,True
+174,Norwood,Bronx,95538,4.3,9.28,True,96350,6,6,0,6.23,False
+175,Oakland Gardens,Queens,15962,5.2,11.38,True,16379,0,0,0,0.0,True
+176,Oakwood,Staten Island,7475,5.77,13.03,True,7764,0,0,0,0.0,True
+177,Ocean Hill,Brooklyn,93040,5.37,11.68,True,94151,3,1,0,1.06,True
+178,Ocean Parkway South,Brooklyn,15631,3.98,8.25,True,15806,0,0,0,0.0,True
+179,Old Astoria,Queens,77520,4.07,8.7,True,78223,4,1,0,1.28,True
+180,Ozone Park,Queens,39398,4.38,9.43,True,39862,0,0,0,0.0,True
+181,Park Slope,Brooklyn,184329,3.72,8.1,True,186081,25,1,0,0.54,True
+182,Parkchester,Bronx,55945,4.52,9.62,True,56656,3,2,2,3.53,True
+183,Pelham Bay,Bronx,30234,4.48,10.0,True,30617,0,0,0,0.0,True
+184,Pelham Bay Park,Bronx,8056,5.97,15.96,True,8114,0,0,0,0.0,True
+185,Pelham Parkway,Bronx,67522,4.47,9.68,True,68184,2,2,0,2.93,True
+186,Penn Station/Madison Sq West,Manhattan,122988,3.77,8.97,True,124919,34,8,0,6.4,False
+187,Port Richmond,Staten Island,16699,5.17,11.42,True,16951,0,0,0,0.0,True
+188,Prospect-Lefferts Gardens,Brooklyn,158290,4.9,10.47,True,160282,3,0,0,0.0,True
+189,Prospect Heights,Brooklyn,71367,4.27,9.27,True,72039,23,0,0,0.0,True
+190,Prospect Park,Brooklyn,12063,4.55,9.92,True,12151,0,0,0,0.0,True
+191,Queens Village,Queens,65652,5.03,10.73,True,66759,0,0,0,0.0,True
+192,Queensboro Hill,Queens,30806,4.28,9.22,True,31124,0,0,0,0.0,True
+193,Queensbridge/Ravenswood,Queens,40621,4.42,9.48,True,41350,1,0,0,0.0,True
+194,Randalls Island,Manhattan,6077,7.75,17.82,True,6164,1,1,1,16.22,True
+195,Red Hook,Brooklyn,41673,4.98,11.22,True,42166,2,1,0,2.37,True
+196,Rego Park,Queens,58024,4.52,9.62,True,58723,3,0,0,0.0,True
+197,Richmond Hill,Queens,98264,4.48,9.8,True,99384,3,2,2,2.01,True
+198,Ridgewood,Queens,134008,4.53,10.12,True,135279,3,0,0,0.0,True
+199,Rikers Island,Bronx,8,9.68,24.93,False,8,0,0,0,0.0,True
+200,Riverdale/North Riverdale/Fieldston,Bronx,39684,5.22,11.23,True,40443,2,2,1,4.95,True
+201,Rockaway Park,Queens,22220,6.27,15.43,True,22771,0,0,0,0.0,True
+202,Roosevelt Island,Manhattan,12608,6.32,13.23,True,13008,0,0,0,0.0,True
+203,Rosedale,Queens,42430,6.42,13.22,True,42973,1,0,0,0.0,True
+204,Rossville/Woodrow,Staten Island,5921,5.77,13.4,True,6174,0,0,0,0.0,True
+205,Saint Albans,Queens,94403,5.42,11.53,True,95819,3,3,1,3.13,True
+206,Saint George/New Brighton,Staten Island,47915,5.2,12.08,True,48441,0,0,0,0.0,True
+207,Saint Michaels Cemetery/Woodside,Queens,4133,3.85,7.15,True,4141,0,0,0,0.0,True
+208,Schuylerville/Edgewater Park,Bronx,72600,4.88,10.87,True,73516,3,2,2,2.72,True
+209,Seaport,Manhattan,42844,4.37,9.32,True,43465,1,0,0,0.0,True
+210,Sheepshead Bay,Brooklyn,71261,4.03,8.8,True,72156,2,0,0,0.0,True
+211,SoHo,Manhattan,106414,3.52,7.53,True,106974,9,0,0,0.0,True
+212,Soundview/Bruckner,Bronx,59453,4.78,10.15,True,60144,1,1,0,1.66,True
+213,Soundview/Castle Hill,Bronx,107172,5.23,11.18,True,108360,2,2,0,1.85,True
+214,South Beach/Dongan Hills,Staten Island,18864,4.97,11.87,True,19251,0,0,0,0.0,True
+215,South Jamaica,Queens,68795,4.97,10.55,True,69900,3,2,0,2.86,True
+216,South Ozone Park,Queens,142231,4.17,9.1,True,144200,4,1,0,0.69,True
+217,South Williamsburg,Brooklyn,24708,5.03,10.47,True,24976,2,2,2,8.01,True
+218,Springfield Gardens North,Queens,46061,5.15,10.62,True,46876,0,0,0,0.0,True
+219,Springfield Gardens South,Queens,40096,5.45,11.15,True,40556,1,0,0,0.0,True
+220,Spuyten Duyvil/Kingsbridge,Bronx,77247,4.6,9.9,True,78191,2,2,0,2.56,True
+221,Stapleton,Staten Island,31885,5.47,12.27,True,32495,0,0,0,0.0,True
+222,Starrett City,Brooklyn,26736,5.42,11.55,True,27681,0,0,0,0.0,True
+223,Steinway,Queens,105857,3.63,7.86,True,106739,4,0,0,0.0,True
+224,Stuy Town/Peter Cooper Village,Manhattan,37210,4.82,9.65,True,37802,1,0,0,0.0,True
+225,Stuyvesant Heights,Brooklyn,165299,5.13,11.2,True,167378,1,0,0,0.0,True
+226,Sunnyside,Queens,134022,4.18,8.87,True,135157,8,0,0,0.0,True
+227,Sunset Park East,Brooklyn,57183,4.45,9.72,True,57703,3,2,1,3.47,True
+228,Sunset Park West,Brooklyn,115768,4.57,9.82,True,116660,3,0,0,0.0,True
+229,Sutton Place/Turtle Bay North,Manhattan,101035,3.5,7.03,True,102353,11,4,1,3.91,True
+230,Times Sq/Theatre District,Manhattan,255971,4.15,10.08,True,262888,39,4,0,1.52,True
+231,TriBeCa/Civic Center,Manhattan,200221,3.67,7.62,True,201818,10,2,0,0.99,True
+232,Two Bridges/Seward Park,Manhattan,82954,5.07,11.05,True,84145,16,3,0,3.57,True
+233,UN/Turtle Bay South,Manhattan,102056,3.88,8.03,True,103630,18,2,2,1.93,True
+234,Union Sq,Manhattan,199951,3.57,7.53,True,201301,42,1,1,0.5,True
+235,University Heights/Morris Heights,Bronx,93152,5.48,11.95,True,94287,0,0,0,0.0,True
+236,Upper East Side North,Manhattan,111783,3.75,7.5,True,113076,3,0,0,0.0,True
+237,Upper East Side South,Manhattan,138991,3.35,6.73,True,140325,6,0,0,0.0,True
+238,Upper West Side North,Manhattan,89189,4.07,8.65,True,90998,2,1,0,1.1,True
+239,Upper West Side South,Manhattan,107272,3.85,8.0,True,109141,4,0,0,0.0,True
+240,Van Cortlandt Park,Bronx,16794,5.47,11.45,True,16912,0,0,0,0.0,True
+241,Van Cortlandt Village,Bronx,77347,4.82,10.23,True,78232,1,1,0,1.28,True
+242,Van Nest/Morris Park,Bronx,83190,4.37,9.43,True,84072,3,0,0,0.0,True
+243,Washington Heights North,Manhattan,111694,4.78,10.85,True,113255,1,0,0,0.0,True
+244,Washington Heights South,Manhattan,159641,4.67,10.72,True,161542,4,1,1,0.62,True
+245,West Brighton,Staten Island,17006,5.4,12.05,True,17296,1,1,0,5.78,True
+246,West Chelsea/Hudson Yards,Manhattan,218684,4.22,9.08,True,220013,5,2,0,0.91,True
+247,West Concourse,Bronx,121956,5.52,13.07,True,122922,5,3,1,2.44,True
+248,West Farms/Bronx River,Bronx,53506,4.85,10.32,True,54087,4,3,1,5.55,True
+249,West Village,Manhattan,167457,3.65,7.92,True,168275,27,0,0,0.0,True
+250,Westchester Village/Unionport,Bronx,54514,4.4,9.47,True,55048,1,0,0,0.0,True
+251,Westerleigh,Staten Island,18244,4.98,10.88,True,18609,0,0,0,0.0,True
+252,Whitestone,Queens,29269,5.18,11.38,True,29773,1,0,0,0.0,True
+253,Willets Point,Queens,1482,5.0,13.69,True,1494,1,1,0,66.93,True
+254,Williamsbridge/Olinville,Bronx,109273,5.3,11.17,True,110483,0,0,0,0.0,True
+255,Williamsburg (North Side),Brooklyn,201557,3.95,9.15,True,202844,3,1,0,0.49,True
+256,Williamsburg (South Side),Brooklyn,168240,4.18,9.32,True,169750,7,0,0,0.0,True
+257,Windsor Terrace,Brooklyn,29318,3.93,8.1,True,29781,0,0,0,0.0,True
+258,Woodhaven,Queens,70182,4.73,10.3,True,71231,1,0,0,0.0,True
+259,Woodlawn/Wakefield,Bronx,76796,5.8,11.98,True,77653,1,1,0,1.29,True
+260,Woodside,Queens,100731,3.9,8.42,True,101536,3,0,0,0.0,True
+261,World Trade Center,Manhattan,74604,4.27,9.27,True,75645,5,0,0,0.0,True
+262,Yorkville East,Manhattan,60893,4.33,8.87,True,62242,0,0,0,0.0,True
+263,Yorkville West,Manhattan,94836,4.05,8.08,True,96228,3,1,0,1.04,True

@@ -1,0 +1,150 @@
+{
+  "run_id": "20260927T202156-2792a3",
+  "month": "2026-07",
+  "mode": "sample",
+  "chaos": "none",
+  "started_at_utc": "2026-09-27T14:51:56+00:00",
+  "thresholds": {
+    "max_excluded_share": 0.05,
+    "max_duplicate_share": 0.001,
+    "min_on_scene_observed_share": 0.8,
+    "min_weather_hour_coverage": 0.99,
+    "min_rides_per_zone": 20,
+    "min_311_mapping_coverage": 0.9,
+    "light_rain_max_mm": 2.5,
+    "max_plausible_trip_miles": 100.0,
+    "max_plausible_request_to_pickup_min": 60.0
+  },
+  "finished_at_utc": "2026-09-27T14:51:57+00:00",
+  "duration_seconds": 0.8,
+  "stage_seconds": {
+    "extract_preserve_completeness": 0.09,
+    "profile_validate": 0.65,
+    "transform_model": 0.03,
+    "kpis": 0.02,
+    "write_outputs": 0.05
+  },
+  "http_retries": {},
+  "row_counts": {
+    "rows": 10000,
+    "kpi_population": 9869,
+    "stage_population": 9322,
+    "zone_population": 9869,
+    "zone_attributable_rides": 10000,
+    "weather_matched_rides": 10000,
+    "weather_matched_kpi_rides": 9869
+  },
+  "gate": {
+    "publish": true,
+    "publish_weather_analysis": true,
+    "publish_friction_kpi": true,
+    "blocking_failures": [],
+    "weather_analysis_blockers": [],
+    "friction_kpi_blockers": [],
+    "status_counts": {
+      "PASS": 28,
+      "WARN": 8,
+      "FAIL": 0,
+      "UNKNOWN": 1
+    }
+  },
+  "decision": "PUBLISHED",
+  "source_manifests": {
+    "hvfhv": {
+      "source": "hvfhv",
+      "url": "http://127.0.0.1:54683/trip-data/fhvhv_tripdata_2026-07.parquet",
+      "retrieved_at_utc": "2026-09-27T14:09:35+00:00",
+      "content_length_header": 490306,
+      "bytes_received": 490306,
+      "sha256": "131f19126abab69105407ffe6ed839d0aae78d9aa4d35a685c3ce9977631a339",
+      "file": "fhvhv_tripdata_2026-07.parquet",
+      "parquet_rows": 10000,
+      "parquet_columns": [
+        "hvfhs_license_num",
+        "dispatching_base_num",
+        "originating_base_num",
+        "request_datetime",
+        "on_scene_datetime",
+        "pickup_datetime",
+        "dropoff_datetime",
+        "PULocationID",
+        "DOLocationID",
+        "trip_miles",
+        "trip_time",
+        "base_passenger_fare",
+        "tolls",
+        "bcf",
+        "sales_tax",
+        "congestion_surcharge",
+        "airport_fee",
+        "tips",
+        "driver_pay",
+        "shared_request_flag",
+        "shared_match_flag",
+        "access_a_ride_flag",
+        "wav_request_flag",
+        "wav_match_flag",
+        "cbd_congestion_fee"
+      ]
+    },
+    "zones": {
+      "source": "zone_lookup",
+      "url": "http://127.0.0.1:54683/misc/taxi_zone_lookup.csv",
+      "retrieved_at_utc": "2026-09-27T14:09:35+00:00",
+      "content_length_header": 12331,
+      "bytes_received": 12331,
+      "sha256": "1a99e105092230f8620f301edcca7f80d3080642ff404d28ed957d3fa222c8ed",
+      "file": "taxi_zone_lookup.csv",
+      "rows": 265
+    },
+    "zone_shapes": {
+      "source": "zone_shapes",
+      "url": "http://127.0.0.1:54683/misc/taxi_zones.zip",
+      "retrieved_at_utc": "2026-09-27T14:09:35+00:00",
+      "content_length_header": 1022574,
+      "bytes_received": 1022574,
+      "sha256": "f6d711917bb4340f8f644d5366c51665489eb2d426dd1a4a55677721ae5adf17",
+      "file": "taxi_zones.zip"
+    },
+    "weather": {
+      "source": "open_meteo",
+      "url": "http://127.0.0.1:56695/v1/archive?latitude=40.7812&longitude=-73.9665&start_date=2026-06-30&end_date=2026-07-31&hourly=temperature_2m%2Cprecipitation%2Cwind_speed_10m&timezone=America%2FNew_York",
+      "retrieved_at_utc": "2026-09-27T14:39:56+00:00",
+      "bytes_received": 25977,
+      "sha256": "d9aeaa2aaaf8f945724afad3ce0aaa59ac9a87febd3f10a8208c39f8574c930d",
+      "file": "open_meteo_hourly_20260927T143956Z.json"
+    },
+    "nyc311": {
+      "source": "nyc311",
+      "endpoint": "http://127.0.0.1:54683/resource/erm2-nwe9.json",
+      "where": "complaint_type='For Hire Vehicle Complaint' AND created_date between '2026-07-01T00:00:00' and '2026-07-31T23:59:59'",
+      "order": "unique_key",
+      "page_size": 500,
+      "retrieved_at_utc": "2026-09-27T14:09:35+00:00",
+      "snapshot_dir": "20260927T140935Z",
+      "expected_count": 1373,
+      "received": 1373,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "offset": 0,
+          "rows": 500,
+          "sha256": "8d6576eb9c2df79facf8a11eeedb4c1b3f5505c7ffaffd2be1878427c5d92342"
+        },
+        {
+          "file": "page_001.json",
+          "offset": 500,
+          "rows": 500,
+          "sha256": "04cd3c91a1a80791d46426b60e0568dbe64e940b7a565ea1fcf4d9af764e7929"
+        },
+        {
+          "file": "page_002.json",
+          "offset": 1000,
+          "rows": 373,
+          "sha256": "805c64ccc3269c5e7376e2b3e8368b13662ec3a9a821902e3230dd1318cf4de7"
+        }
+      ],
+      "count_sha256": "31ad64504d7650868ea3f853c71bdef00f56735a094141174131233d23851951"
+    }
+  }
+}
